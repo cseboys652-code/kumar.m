@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Adhiparasakthi Engineering College</title>
+
+<style>
+body {
+    font-family: Arial;
+    margin: 0;
+    background: #f2f2f2;
+}
+
+/* LOGIN */
+#login {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.box {
+    width: 320px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #c00000;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: darkred;
+}
+
+/* HOME */
+#home {
+    display: none;
+    text-align: center;
+}
+
+header {
+    background: #c00000;
+    color: white;
+    padding: 20px;
+}
+
+.card {
+    width: 60%;
+    margin: 30px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.logo {
+    width: 140px;
+    margin-top: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- LOGIN PAGE -->
+<div id="login">
+    <h2>APEC LOGIN</h2>
+
+    <div class="box">
+        <input type="text" id="user" placeholder="Username">
+        <input type="password" id="pass" placeholder="Password">
+        <button onclick="login()">Login</button>
+    </div>
+</div>
+
+<!-- HOME PAGE -->
+<div id="home">
+    <header>
+        <h1>Welcome to APEC</h1>
+    </header>
+
+    <!-- LOGO (IMPORTANT: change file name correctly) -->
+    <img src="logo.png" class="logo" alt="College Logo">
+
+    <div class="card">
+        <h2>Adhiparasakthi Engineering College</h2>
+        <p>Welcome to the official student portal</p>
+    </div>
+</div>
+
+<script>
+function login() {
+    var u = document.getElementById("user").value;
+    var p = document.getElementById("pass").value;
+
+    if (u !== "" && p !== "") {
+        document.getElementById("login").style.display = "none";
+        document.getElementById("home").style.display = "block";
+    } else {
+        alert("Enter username and password");
+    }
+}
+</script>
+
+</body>
+</html>
